@@ -27,13 +27,26 @@ public class Operators {
 	    System.out.println("Logical Not: " + (!(num2 == num4)));
 	}
 	
-	static void Assignment(int num1, int num2, int num3, int num4) {
-		 System.out.println("Assignment operators");
+	static void Bitwise(int num1, int num2, int num4) {
+		System.out.println("Bitwise Operator");
+		System.out.println("Bitwise And: " + (num1 & num2));
+	    System.out.println("Bitwise Or: " + (num1 | num2));
+	    System.out.println("Bitwise XOR: " + ((num2 ^ num4)));
+	    System.out.println("Bitwise left shift: " + (num1 << 2));
+	    System.out.println("Bitwise Right shift: " + (num1 >> 2));
+	}
+	static void Assignment(int num1, int num2) {
+		 System.out.println("Assignment Operators");
 		 System.out.println("Addition Assignment: " + (num1 += 3));
 		 System.out.println("Substraction Assignment: " + (num1 -= 2));
 		 System.out.println("Multiplication Assignment: " + (num1 *= num2));
 		 System.out.println("Division Assignment: " + (num1 /= num2));
 		 System.out.println("Modulus Assignment: " + (num1 %= num2));
+	}
+	static void  Ternary(int num1, int num2) {
+		System.out.println("Ternary Operator:");
+		int max = (num1 > num2) ? num1 : num2;
+		System.out.println("max value by  Ternary: " + max);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -48,7 +61,11 @@ public class Operators {
 		Relational(num1, num2, num3, num4);
 		//Logical Operator
 		Logical(num1, num2, num3, num4);
-	    //Assignment operators
-		Assignment(num1, num2, num3, num4);
+		//Bitwise Operator
+		Bitwise(num1, num2, num4);
+		//Assignment Operator
+		Assignment(num1, num2);
+		// Ternary Operator
+		Ternary(num1, num2);
 	}
 }
