@@ -17,13 +17,13 @@ public class CurdOperations {
 	}
 	
 	//created the table now we have to add the values to table
-	public static int addStudent(int sid,String sname)
+	public static int addCar(int cid,String cname)
 	{
 		int n=0;
 		try {
 			pst = con.prepareStatement("INSERT INTO car VALUES(?,?)");
-			pst.setInt(1, sid);
-			pst.setString(2, sname);
+			pst.setInt(1, cid);
+			pst.setString(2, cname);
 			pst.executeUpdate();
 		}catch(Exception e)
 		{

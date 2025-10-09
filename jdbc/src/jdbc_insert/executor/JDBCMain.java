@@ -5,9 +5,9 @@ import jdbc_insert.services.CurdOperations;
 public class JDBCMain {
 
 	public static void main(String[] args) {
-		CurdOperations.addStudent(101, "Toyota");
-		CurdOperations.addStudent(102, "Ford");
-		CurdOperations.addStudent(103, "Honda");
+		CurdOperations.addCar(101, "Toyota");
+		CurdOperations.addCar(102, "Ford");
+		CurdOperations.addCar(103, "Honda");
 	}
 
 }
