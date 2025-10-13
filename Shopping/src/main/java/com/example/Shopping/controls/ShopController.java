@@ -13,22 +13,22 @@ public class ShopController {
     @Autowired
     private ShopServices shopServices;
 
-    @PostMapping("/add")
+    @PostMapping("/add")     //http://localhost:8099/shop/add
     public Shop addShop(@RequestBody Shop shop) {
         return shopServices.addShop(shop);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/all")       //http://localhost:8099/shop/all 
     public List<Shop> getAllShops() {
         return shopServices.getAllShops();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}")     //http://localhost:8099/shop/1
     public Shop getShopById(@PathVariable int id) {
         return shopServices.getShopById(id);
     }
     
- // ✏️ UPDATE with PathVariable
+
     @PutMapping("/update/{id}")
     public Shop updateShop(@PathVariable int shopId, @RequestBody Shop shop) {
         shop.setShopId(shopId); // Ensure the ID from the path is set in the Shop object
@@ -36,8 +36,7 @@ public class ShopController {
     }
 
 
-    // ❌ DELETE
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")          //http://localhost:8099/shop/delete/1 
     public String deleteShop(@PathVariable int id) {
         shopServices.deleteShop(id);
         return "Shop deleted successfully with ID: " + id;
